@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishant | About Me</title>
+<style>
+  :root {
+    --linkedin-blue: #0A66C2;
+    --royal-blue: #4169E1;
+    --dark-navy: #1B1F3B;
+    --text-grey: #4A4A4A;
+    --bg-grey: #F3F2EF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-grey);
+    color: var(--text-grey);
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: linear-gradient(135deg, var(--linkedin-blue), var(--royal-blue));
+    color: white;
+    padding: 50px 20px 70px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.4em;
+  }
+  header p {
+    margin-top: 8px;
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+  .container {
+    max-width: 800px;
+    margin: -40px auto 40px;
+    padding: 0 20px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 30px;
+    margin-bottom: 24px;
+  }
+  .card h2 {
+    color: var(--linkedin-blue);
+    border-left: 4px solid var(--royal-blue);
+    padding-left: 12px;
+    margin-top: 0;
+  }
+  .interests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .interest-item {
+    background: var(--bg-grey);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--royal-blue);
+  }
+  .interest-item .icon {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 12px 28px;
+    font-size: 16px;
+    background: var(--royal-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button:hover { background: var(--linkedin-blue); }
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9em;
+  }
+  @media print {
+    button { display: none; }
+    header { background: var(--linkedin-blue) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.8em; }
+    .interests { grid-template-columns: 1fr; }
+    .card { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Nishant</h1>
+    <p>Program Manager, STEP Bihar | Mantra4Change</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Welcome to my little corner of the internet. I work on education programmes in Bihar, and outside of work I enjoy the kitchen, tech, and learning new things.</p>
+    </div>
+
+    <div class="card">
+      <h2>What I Love</h2>
+      <div class="interests">
+        <div class="interest-item">
+          <span class="icon">🍳</span>
+          Cooking
+        </div>
+        <div class="interest-item">
+          <span class="icon">💻</span>
+          Exploring Technology
+        </div>
+        <div class="interest-item">
+          <span class="icon">🎂</span>
+          Birthday: 5th September
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <button onclick="window.print()">Download as PDF</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Nishant. Built from scratch, one terminal command at a time.
+  </footer>
+</body>
+</html>
